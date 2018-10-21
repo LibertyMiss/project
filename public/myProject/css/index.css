@@ -1,0 +1,153 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-links {
+  width: 100%;
+  padding: 10px;
+}
+.nav-links a {
+  width: 33.33%;
+  float: left;
+}
+.nav-links a img {
+  width: 100%;
+}
+.brand {
+  width: 100%;
+}
+.brand > img {
+  width: 100%;
+}
+.brand > ul {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.brand > ul > li {
+  width: 25%;
+  float: left;
+}
+.brand > ul > li > a {
+  display: block;
+}
+.brand > ul > li > a > img {
+  width: 100%;
+}
+.product {
+  width: 100%;
+}
+.product > img {
+  width: 100%;
+}
+.product > ul {
+  width: 100%;
+  padding: 10px;
+}
+.product > ul > li {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 50%;
+  float: left;
+  box-shadow: 0px 0px 3px #ccc;
+  text-align: center;
+}
+.product > ul > li > img {
+  width: 100%;
+}
+.product > ul > li p {
+  text-align: center;
+}
+.product > ul > li p > span {
+  text-align: center;
+  color: #ff0f0f;
+}
+.product > ul > li > button {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(red, purple);
+  color: #fff;
+  width: 150px;
+  border-radius: 10px;
+}
+.women {
+  margin-top: 10px;
+  width: 100%;
+}
+.women > img {
+  width: 100%;
+}
+.women > ul {
+  width: 100%;
+  padding: 10px;
+}
+.women > ul > li {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 50%;
+  float: left;
+  box-shadow: 0px 0px 3px #ccc;
+  text-align: center;
+}
+.women > ul > li > img {
+  width: 100%;
+}
+.women > ul > li > span {
+  text-align: center;
+}
+.women > ul > li p {
+  text-align: center;
+}
+.women > ul > li p > span {
+  text-align: center;
+  color: #ff0f0f;
+}
+.women > ul > li > button {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(red, purple);
+  color: #fff;
+  width: 150px;
+  border-radius: 10px;
+}
+.men {
+  margin-top: 10px;
+  width: 100%;
+}
+.men > img {
+  width: 100%;
+}
+.men > ul {
+  width: 100%;
+  padding: 10px;
+}
+.men > ul > li {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 50%;
+  float: left;
+  box-shadow: 0px 0px 3px #ccc;
+  text-align: center;
+}
+.men > ul > li > img {
+  width: 100%;
+}
+.men > ul > li > span {
+  text-align: center;
+}
+.men > ul > li p {
+  text-align: center;
+}
+.men > ul > li p > span {
+  text-align: center;
+  color: #ff0f0f;
+}
+.men > ul > li > button {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(red, purple);
+  color: #fff;
+  width: 150px;
+  border-radius: 10px;
+}
