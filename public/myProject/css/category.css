@@ -2,23 +2,25 @@
   position: absolute;
   width: 100%;
   top: 44px;
-  bottom: 50px;
+  bottom: 40px;
   background-color: #f5f5f5;
   display: flex;
 }
 .categoryCon > .cateLeft {
   width: 80px;
   position: relative;
+}
+.categoryCon > .cateLeft .links {
   background-color: #fff;
 }
-.categoryCon > .cateLeft a {
+.categoryCon > .cateLeft .links > a {
   display: block;
   line-height: 50px;
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
   border-right: 1px solid #e0e0e0;
 }
-.categoryCon > .cateLeft.active {
+.categoryCon > .cateLeft .links > a.active {
   background-color: #f5f5f5;
   border-right: 1px solid transparent;
 }
@@ -26,10 +28,17 @@
   flex: 1;
   position: relative;
   left: 10px;
-  background-color: #fff;
 }
 .categoryCon > .cateRight .brandRight {
   width: 100%;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.categoryCon > .cateRight .brandRight span {
+  display: block;
+  padding-left: 10px;
+  line-height: 30px;
+  background-color: #eee;
 }
 .categoryCon > .cateRight .brandRight > li {
   width: 33.33%;
@@ -42,4 +51,8 @@
 }
 .categoryCon > .cateRight .brandRight > li > a > img {
   width: 100%;
+}
+.categoryCon > .cateRight .brandRight > li > a > p {
+  text-align: center;
+  color: #000;
 }
