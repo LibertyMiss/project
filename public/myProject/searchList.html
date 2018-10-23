@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="./assets//mui//css/mui.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./css/category.css">
-    <script src="./assets//mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./css/searchList.css">
+    <script src="./assets//mui//js/mui.min.js"></script>
     <script src="./assets/zepto/zepto.min.js"></script>
     <script src="./assets/artTemplate/template-native.js"></script>
-    <!-- <script src="./assets/art-template/template-web.js"></script> -->
-    <script src="./js/category.js"></script>
+    <!-- <script src="./js/searchList.js"></script> -->
 </head>
 
 <body>
     <header class="mui-bar mui-bar-nav my-header">
-        <h1 class="mui-title">分类页</h1>
+        <h1 class="mui-title">搜索中心</h1>
         <a class="mui-icon mui-icon-search mui-pull-right"></a>
     </header>
     <nav class="mui-bar mui-bar-tab my-footer">
@@ -40,45 +39,26 @@
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
-    <div class="categoryCon">
-        <div class="cateLeft">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <div class="links" id="templateCategory">
-                    </div>
+    <div class="list">
+        <div class="container">
+            <div class="mui-row">
+                <div class="mui-col-xs-6 search-bar" id="priceSort">
+                    <span>价格</span>
+                    <span class="fa fa-angle-down"></span>
                 </div>
+                <div class="mui-col-xs-6 search-bar" id="numSort">
+                    <span>销量</span>
+                    <span class="fa fa-angle-down"></span>
+                </div>
+            </div>
+
+            <div class="product">
+                <ul class="list mui-clearfix" id="productBox">
+
+                </ul>
             </div>
         </div>
-        <div class="cateRight">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <ul class="brandRight mui-clearfix" id="categorySen">
-                    </ul>
-                </div>
-            </div>
-        <div>
     </div>
 </body>
-<script type="text/template" id="categoryFirst">
-    <% for(var i=0;i< result.length;i++){ %>
-        <a href="javascript:;" data-id="<%=result[i].id %>">
-            <%= result[i].categoryName %>
-        </a>
-    <% } %>
-</script>
-<script id="categorySecond" type="text/html">
-    <% for(var i=0;i< data.length;i++){ %>
-        <li>
-            <a href="">
-                <img src="<%=data[i].brandLogo %>">
-                <p>
-                    <%=data[i].brandName %>
-                </p>
-            </a>
-        </li>
-    <% } %>
-    <% if(!data.length){ %>
-        <span>暂无数据</span>
-    <% } %>
-</script>
+
 </html>
