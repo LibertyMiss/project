@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="./js/detail.js"></script>
+    <style>
+        .detail-title{
+            padding:10px;
+            font-size:16px;
+        }
+        .detail-price{
+            padding:10px;
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            font-size:14px;
+        }
+
+        .detail-price .new{
+            font-size: 24px;
+            color: #ea543d;
+            padding-right:10px;
+        }
+
+        .detail-price .old{
+            color:#ccc;
+            text-decoration:line-through;
+        }
+
+        .detail-size{
+            padding:10px;
+            border-bottom:1px solid #ccc;
+        }
+
+        .detail-size span{
+            display:inline-block;
+            width:28px;
+            height:28px;
+            border:1px solid #ccc;
+            line-height:28px;
+            text-align:center;
+            margin-right:10px;
+            margin-bottom:10px;
+        }
+
+        .detail-size span.active{
+            background:#fa672d;
+            color:#FFF;
+        }
+
+        .detail-num{
+            padding:10px;
+        }
+
+        .detail-num span{
+            display:inline-block;
+            width:28px;
+            height:28px;
+            border:1px solid #ccc;
+            line-height:28px;
+            text-align:center;
+        }
+        .detail-num input{
+            display:inline-block;
+            width:28px;
+            height:28px;
+            line-height:normal;
+            margin:0;
+            padding:0;
+            border-radius:0;
+            border-left:none;
+            border-right:none;
+            vertical-align:top;
+            text-align:center;
+        }
+
+        .detail-buttons{
+            padding:10px;
+        }
+
+        .detail-buttons *{
+            display:inline-block;
+            width:50%;
+            height:34px;
+            line-height:34px;
+            text-align:center;
+            color:#FFF;
+        }
+
+        .detail-buttons span{
+            background:#991020;
+        }
+
+        .detail-buttons a{
+            background:#fa672d;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav my-header">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">商品详情页</h1>
+        <a href='addAddress.html' class="mui-icon mui-pull-right"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab my-footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+
+            <div id="detailBox">
+                <!-- <div class="mui-slider">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <div class="mui-slider-item">
+                            <a href="#"><img src="./images/detail.jpg" /></a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#"><img src="./images/banner2.png" /></a>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="detail-buttons">
+                <a href="#">查看购物车</a><span id="addCart">加入购物车</span>
+            </div>
+        </div>
+    </div>
+    <!-- <%=res.data %> -->
+    <script id="detailTpl" type="text/html">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop" id="images">
+                <% for(var i=0;i< res.pic.length;i++){ %>
+                <div class="mui-slider-item">
+                    <a href="#"><img src="<%=res.data%>" /></a>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="detail-title">
+            <%= res.proName %>
+        </div>
+        <div class="detail-price">
+            价格：<span class="new">¥
+                <%=res.price %></span><span class="old">¥
+                <%=res.oldPrice %></span>
+        </div>
+        <div class="detail-size">
+            尺码：
+            <% for(var i=0;i< res.arr.length;i++){ %>
+            <span>
+                <%=res.arr[i] %></span>
+            <% } %>
+        </div>
+        <div class="detail-num">
+            数量：<span class="reduce">-</span><input type="text" class="num" value="1"><span class="plus">+</span>
+            剩余：<i>
+                <%=res.num%></i>件
+        </div>    
+    </script>
+</body>
+
+</html>
